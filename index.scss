@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap');
+*{
+    margin: 0;padding: 0;box-sizing: border-box; font-family: 'Epilogue', sans-serif;
+
+}
+
+/* image resize */
+
+img{
+    width: 100%;
+}
+
+ .logo{
+    width: 5rem;
+}
+
+.hamburger{
+    width: 2rem;
+}
+
+.partner-img{
+    width: 5rem;
+}
+
+.closebtn-img{
+    width: 2rem;
+}
+
+.arrow-icon{
+   width: 30px;
+   height: 20px;
+}
+
+.dropdown-icon{
+    width: 1.5rem;
+}
+/* body */
+
+body{
+    background-color: hsl(0, 0%, 98%);
+}
+
+/*navigation bar*/
+header{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex{display: flex;}
+
+.nav-list{
+    align-items:flex-end;
+    flex-direction: column;
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+
+    .nav-links{
+        margin-right: 2rem;   
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-self: start;
+        margin-top: 3rem;
+
+        .nav-item:hover{
+            color: black;
+            font-weight: 700;
+        }
+
+        .item-dropdown{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dropdown-container{
+            color: hsl(0, 0%, 41%);
+            display: none;
+            flex-direction: column;
+            align-self: center;
+            gap: 20px;
+            .dropdown-item{
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+
+        .show{
+           display: flex;
+        }
+    }
+
+    .nav-btns{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-self: center; 
+        gap: 1rem;
+
+        .pry-btn{
+            padding: 10px;
+            width: 15rem;
+            height: 2.8rem;
+            border-radius: 15px;
+            background: inherit;
+            font-size: 1.3rem;
+            color: hsl(0, 0%, 41%);
+
+            &:hover{
+                color: #000;
+    
+              }
+        }
+        .transparent{
+            border: transparent;
+        }
+
+        .solid{
+            border: 1px solid #000;
+
+            &:hover{
+              border: 2px solid #000;
+            }
+        }
+    }
+
+    a{
+        text-decoration: none;
+        color: hsl(0, 0%, 41%);
+    }
+}
+
+.sidenav{
+    background-color: #fff;
+   height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.3s;
+  }
+
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+    margin-left: 2rem;
+  }
+}
+
+/* hero */
+.desktop{
+    display: none;
+}
+
+.mobile{
+    display: block;
+}
+.hero-section{
+    text-align: center;
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+
+
+.hero__img-desktop{
+    width: 30rem;
+    height: auto;
+}
+    .hero-heading{
+        margin-top: 20px;
+        padding: 20px 0;
+        font-weight: 900;
+    }
+     .para{
+         color:  hsl(0, 0%, 41%);
+         font-size: 18px;
+     }
+}
+
+.cta{
+    margin: 1rem 0;
+    background-color: #000;
+    width: 10rem;
+    height: 3rem;
+    color: white;
+    border: transparent;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    transition: 1s;
+
+    &:hover{
+        border: 1px solid #000;
+        background-color: transparent;
+        color: #000;
+    }
+}
+/*footer*/
+footer{
+    .partners{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        gap: 5px;
+        justify-content: space-between;
+        margin: 2rem 0;
+
+    }
+}
+
+.attribution{
+    font-size: 12px;
+    text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+    .arrow-icon{
+        width: 20%;
+        height: 10px;
+     }
+
+     .dropdown-icon{
+        width: 1rem;
+    }
+
+    .sidenav {
+    background-color: transparent;
+    width: 90%;
+    gap: 0.5rem;
+   height: max-content;
+    flex-direction:row;
+    padding-top: 5px;
+    position: relative;
+
+    a {
+      
+        font-size: 15px;
+      }
+   
+   
+
+    .closebtn{
+        display: none;
+    }
+
+}
+
+
+    .hamburger{
+       display: none;
+    }
+
+    .desktop{
+        display: flex;
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    .nav-list{
+        align-items:flex-start;
+        flex-direction: row;
+        display: flex;
+        gap: 0.5rem;
+    
+        .nav-links{
+            flex-direction: row;
+            gap: 10px;
+            margin-top: 0px;
+
+            .dropdown-container{
+                gap: 10px;
+           
+            }
+
+            .dropdown-container2{
+                margin-left: 11rem;
+            }
+    
+            .show{
+        display: flex;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        position: fixed;
+        top: 20px;
+        margin-top: 2rem;
+            }
+
+
+        }
+    
+    .nav-btns{
+        flex-direction: row;
+        justify-content: flex-end; 
+        align-self: flex-end; 
+        gap: 10px;
+        margin-left: 10%;
+        position: fixed;
+        right: 10px;
+        top: 10px;
+    
+
+
+        .pry-btn{
+            padding: 10px;
+            font-size: 1rem;
+            width: 13rem;
+ 
+        }
+    }
+    
+    }
+
+    .hero-section{
+        margin-top: 5rem;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    
+        .hero-text{
+            width: 35rem;
+            align-self: start;
+        }
+    
+        .hero-heading{
+            font-size: 5rem;
+        }
+    
+        .para{
+            font-size: 1.5rem;
+        }
+    
+    }
+    
+  }
+
